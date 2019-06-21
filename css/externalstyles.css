@@ -3,7 +3,7 @@ header{
     padding: 20px;
     text-align: center;
     height: 100px;
-    background-image: url(images/orion.jpg);
+    background-image: url(../images/orion.jpg);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@ a:hover{
 }
 
 header .homeicon a{
-    background-image:url(images/logoconcept.jpg);
+    background-image:url(../images/logoconcept.jpg);
     background-size:90px;
     
     background-repeat: no-repeat;
