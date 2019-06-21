@@ -1,0 +1,121 @@
+header{
+    background: black;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    background-image: url(images/orion.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}    
+a{
+    color:white;
+    text-decoration: none;                
+}
+nav{
+    margin-left: 0px;
+    padding:0px;
+    
+}
+
+li:hover{
+    background: green;
+}
+
+.homeicon:hover{
+    background: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    
+    background: rgb(39, 155, 3);
+}
+
+header .homeicon a{
+    background-image:url(images/logoconcept.jpg);
+    background-size:90px;
+    
+    background-repeat: no-repeat;
+    display:inline-block;
+    height: 50px;
+    position: relative;
+    text-indent: -9999999px;
+    width:90px;
+    top: -10px;
+}
+
+body{
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+    background: white;
+    color: limegreen;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+h1{
+    color: white;
+}  
+
+ul{
+    padding: 0;
+    margin:0;
+    list-style-type: none;
+}
+li{
+    display:inline-block;
+    background:black;
+    
+    padding: 4%;
+    margin: 0px, 10px, 0px,0px;
+    }
+li.homeicon{
+    background:none;
+}
+
+.section1{
+    display: flex;
+    background:grey;
+}
+
+.section1 div{
+    width: 100%;
+    margin: 5px;
+    
+}
+
+.section1.changes div{
+    background:white;
+    color:rgb(104, 103, 103);
+}
+
+                  
+.features{
+    background: black;
+    padding: 20px 20px 20px 5px;
+    display: flex;
+    flex-direction: row;    
+}                
+.features figure{
+    
+    background:rgb(7, 7, 7);
+    color: rgb(27, 185, 13);
+    margin:auto;
+    align-content: center;
+    width:0px;
+    position:relative;
+}
+
+.features figure img{
+    width: 200px;
+    background: black;
+    text-align:center;
+    border-radius: 50%;
+    
+}
+
+
+footer{
+    background:rgb(24, 24, 24);
+    padding: 30px;
+} 
