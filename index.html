@@ -1,44 +1,127 @@
 <!DOCTYPE html>
-<html>
-
-    <head> 
-        <title>The home of Scooch</title>
-        <link rel="stylesheet" href="./css/externalstyles.css">
-    </head>       
-    <body>
-            <header>
-                <nav style="background-color: white"> 
-                    <ul>
-                        
-                        <li><a href="./pages/science.html"><strong>Science</strong></a></li>
-                        <li><a href="./pages/projects.html"><strong>Projects</strong></a></li>
-                        <li class="homeicon"><a href="index.html">Home of the Scooch Logo</a></li>
-                        <li><a href="./pages/wellbeing.html"><strong>Wellbeing</strong></a></li>
-                        <li><a href="./pages/expression.html"><strong>Expression</strong></a></li>
-                        
-                    </ul>  
-                </nav>
-                <h1>Home</h1>
-            </header>
-
-            <section class="features">              
-                        
-
-            </section>
-
-            <section class="section1 changes">
-                <div>d</div>
-                <div>e</div>
-                <div>f</div>
-            </section>
-            <footer>footer</footer>
-            
+<html lang="en">
+<head>
+    <title>Scoochy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                body{margin:0px;}
                     
-            
-            
+                /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+                .flex-nav{display: flex;
+                          /*Nowrap specifies flex items don't wrap*/
+                          flex-wrap:nowrap;
+                          /*space-between displays flex lines with equal space between them*/
+                          align-content: space-between;
+                          /*justify-content:center aligns flex items at center*/
+                          justify-content: center;
+                          background-color:black;}
 
+                .flex-nav div{background-color:gold;
+                              width:15%;
+                              margin:10px;
+                              /*align text to center of div*/
+                              text-align: center;
+                              /*height of div*/
+                              line-height:75px;}
+
+                /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+                .flex-container {display: flex;
+                                 /*flex-wrap:specifies items will wrap if necessary*/
+                                 flex-wrap: wrap;
+                                 /*justify-content:center aligns flex items at center*/
+                                 justify-content: center;
+                                 overflow: hidden;
+                                                                
+                                } 
+
+                .flex-container div{background-color:white;
+                                    border-style: solid;
+                                    width:45%;
+                                    margin: 5px; 
+                                    background-color: white;
+                                    padding: 20px;}
+                
+                /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+                                    @media screen and (max-width: 1115px) {
+                                    .flex-container {   
+                                    justify-content: center;    
+                                    flex-direction: column;
+                                    width:200%;
+                                    }
+               
+               
+                
+                
+        </style>
+</head>
+
+<body>
+    <div class="flex-nav">
+            <div class="science"><strong>Science</strong></div>
+            <div class="projects"><strong>Projects</strong></div>
+            <div clas="home"><strong>Home</strong></div>
+            <div class="wellbeing"><strong>Wellbeing</strong></div>  
+            <div class="expression"><strong>Expression</strong></div>
             
-            
-    </body>
-       
+    </div>
+
+    <!--To start using Flexbox model, you need to first
+        define a flex container (Parent Element) with a display 
+        property set to flex-->
+    <div class="flex-container">
+            <div class="about">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="whatsnew">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="thesite">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="contact">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+    </div>
+      
+
+
+
+
+
+</body>
 </html>
