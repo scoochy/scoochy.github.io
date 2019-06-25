@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
                 * {box-sizing: border-box;}
-                body{margin:0px;}
+                body{margin:0px;
+                     font-family:monospace;                     
+                     color: lime;}
                     
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
                 .flex-nav{display: flex;
                           /*Nowrap specifies flex items don't wrap*/
-                          flex-wrap:nowrap;
-                          /*space-between displays flex lines with equal space between them*/
-                          align-content: space-between;
-                          /*justify-content:center aligns flex items at center*/
-                          justify-content: center;
-                          background-color:black;}
+                          flex-wrap:nowrap;           
+                          background-color:black;
+                          margin:0px;}
 
-                .flex-nav div{background-color:gold;
+                .flex-nav div{background-color:grey;
                               width:20%;
                               margin:0px;
                               /*align text to center of div*/
                               text-align: center;
                               /*height of div*/
                               line-height:75px;
-                              border-style:solid;}
+                              border-style:solid;
+                              }
 
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
@@ -36,30 +36,42 @@
                                  /*justify-content:center aligns flex items at center*/
                                  justify-content: center;
                                  overflow: hidden;
+                                 background-color:black;
                                                                 
                                 } 
 
-                .flex-container div{background-color:white;
+                .flex-container div{background-color:black;
                                     width:50%;
                                     border-style: solid;                                    
-                                    margin: 0px; 
-                                    background-color: white;
+                                    margin: 0px;                                    
                                     padding: 20px;}
                 
+                .science{background-image: url(images/science.PNG);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                         
+                .projects{background-image: url(images/projects.jpg);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                
+                .home{background-image: url(images/logotest.PNG);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                                                  
+                .wellbeing{background-image: url(images/wellbeing.jpg);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                         
+                .expression{background-image: url(images/expression.jpg);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+
                 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-                                    @media screen and (max-width: 1115px) {
-                                    .flex-container {   
-                                    justify-content: center;    
-                                    flex-direction: column;}
-                                    .flex-container div{
-                                        width: 100%;
-                                    }
-                                    
-                                    
-               
-               
-                
-                
+                @media screen and (max-width: 1115px) {
+                .flex-container {justify-content: center;    
+                                flex-direction: column;}
+                .flex-container div{width: 100%;}
+                                 
         </style>
 </head>
 
@@ -67,7 +79,7 @@
     <div class="flex-nav">
             <div class="science"><strong>Science</strong></div>
             <div class="projects"><strong>Projects</strong></div>
-            <div clas="home"><strong>Home</strong></div>
+            <div class="home"><strong>Home</strong></div>
             <div class="wellbeing"><strong>Wellbeing</strong></div>  
             <div class="expression"><strong>Expression</strong></div>
             
