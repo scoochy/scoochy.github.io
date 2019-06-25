@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+                * {box-sizing: border-box;}
                 body{margin:0px;}
                     
                 /*Parent Element (Container):becomes
@@ -19,12 +20,13 @@
                           background-color:black;}
 
                 .flex-nav div{background-color:gold;
-                              width:15%;
-                              margin:10px;
+                              width:20%;
+                              margin:0px;
                               /*align text to center of div*/
                               text-align: center;
                               /*height of div*/
-                              line-height:75px;}
+                              line-height:75px;
+                              border-style:solid;}
 
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
@@ -38,9 +40,9 @@
                                 } 
 
                 .flex-container div{background-color:white;
-                                    border-style: solid;
-                                    width:45%;
-                                    margin: 5px; 
+                                    width:50%;
+                                    border-style: solid;                                    
+                                    margin: 0px; 
                                     background-color: white;
                                     padding: 20px;}
                 
@@ -48,9 +50,12 @@
                                     @media screen and (max-width: 1115px) {
                                     .flex-container {   
                                     justify-content: center;    
-                                    flex-direction: column;
-                                    width:200%;
+                                    flex-direction: column;}
+                                    .flex-container div{
+                                        width: 100%;
                                     }
+                                    
+                                    
                
                
                 
