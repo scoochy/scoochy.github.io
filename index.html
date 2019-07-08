@@ -1,44 +1,139 @@
 <!DOCTYPE html>
-<html>
-
-    <head> 
-        <title>The home of Scooch</title>
-        <link rel="stylesheet" href="./css/externalstyles.css">
-    </head>       
-    <body>
-            <header>
-                <nav style="background-color: white"> 
-                    <ul>
-                        
-                        <li><a href="./pages/science.html"><strong>Science</strong></a></li>
-                        <li><a href="./pages/projects.html"><strong>Projects</strong></a></li>
-                        <li class="homeicon"><a href="index.html">Home of the Scooch Logo</a></li>
-                        <li><a href="./pages/wellbeing.html"><strong>Wellbeing</strong></a></li>
-                        <li><a href="./pages/expression.html"><strong>Expression</strong></a></li>
-                        
-                    </ul>  
-                </nav>
-                <h1>Home</h1>
-            </header>
-
-            <section class="features">              
-                        
-
-            </section>
-
-            <section class="section1 changes">
-                <div>d</div>
-                <div>e</div>
-                <div>f</div>
-            </section>
-            <footer>footer</footer>
-            
+<html lang="en">
+<head>
+    <title>Scoochy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                * {box-sizing: border-box;}
+                body{margin:0px;
+                     font-family:monospace;                     
+                     color: lime;}
                     
-            
-            
+                /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+                .flex-nav{display: flex;
+                          /*Nowrap specifies flex items don't wrap*/
+                          flex-wrap:nowrap;           
+                          background-color:black;
+                          margin:0px;}
 
+                .flex-nav div{background-color:grey;
+                              width:20%;
+                              margin:0px;
+                              /*align text to center of div*/
+                              text-align: center;
+                              /*height of div*/
+                              line-height:75px;
+                              border-style:solid;}
+
+                /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+                .flex-container {display: flex;
+                                 /*flex-wrap:specifies items will wrap if necessary*/
+                                 flex-wrap: wrap;
+                                 /*justify-content:center aligns flex items at center*/
+                                 justify-content: center;
+                                 overflow: hidden;
+                                 background-color:black;
+                                                                
+                                } 
+
+                .flex-container div{background-color:black;
+                                    width:50%;
+                                    border-style: solid;                                    
+                                    margin: 0px;                                    
+                                    padding: 20px;}
+                
+                .science{background-image: url(images/science.PNG);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                         
+                .projects{background-image: url(images/projects.jpg);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                
+                .home{background-image: url(images/logotest.PNG);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                                                  
+                .wellbeing{background-image: url(images/wellbeing.jpg);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+                         
+                .expression{background-image: url(images/expression.jpg);
+                         background-size:100%;
+                         background-repeat: no-repeat;}
+
+                /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+                @media screen and (max-width: 1115px) {
+                .flex-container {justify-content: center;    
+                                flex-direction: column;}
+                .flex-container div{width: 100%;}
+                                 
+        </style>
+</head>
+
+<body>
+    <div class="flex-nav">
+            <div class="science"><a href="pages/science.html"><strong>Science</strong><a></div>
+            <div class="projects"><a href="pages/projects.html"><strong>Projects</strong><a></div>
+            <div class="home"><a href="index"><strong>Home</strong><a></div>
+            <div class="wellbeing"><a href="pages/wellbeing.html"><strong>Wellbeing</strong><a></div>  
+            <div class="expression"><a href="pages/expression.html"><strong>Expression</strong><a></div>
             
-            
-    </body>
-       
+    </div>
+
+    <!--To start using Flexbox model, you need to first
+        define a flex container (Parent Element) with a display 
+        property set to flex-->
+    <div class="flex-container">
+            <div class="about">
+                    <h2>About the Site</h2>
+                    <h5>Abstract</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                       
+            </div>
+            <div class="whatsnew">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="thesite">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="contact">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <br>
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+    </div>
+      
+
+
+
+
+
+</body>
 </html>

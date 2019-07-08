@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Science</title>
 
-    <link href="../css/externalstyles.css" rel="stylesheet" />
+    <link href="externalstyles.css" rel="stylesheet" />
 
     <style>
                
@@ -15,61 +15,89 @@
             margin: 0px;
             padding: 0px;
             background-color: black;
+            font-family:monospace;
         }
 
-      
-        section {
-            background-color: black;
+        .heading {
+            
+            display:inline-flex;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color:black;
             }
 
+
+        h1 {
+            align-content:center;
+            margin:20px;
+            border-radius:10px;
+            background-color:white;
+            text-align:centre;
+            color:black;
+            font-size: 80px;
+            font-family:monospace;
+        }
+        
         
         #Physics {
-            background-color: white;
+            background-color: black;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 100px;
             font-size: 50px;
             position: absolute;
             left: 120px;
             bottom: 100px;
-
-        }
+            color:rgb(9, 255, 0);
+            font-family:monospace;
+            }
 
         #Chemistry {
-            background-color: white;
+            background-color: black;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 100px;
             font-size: 50px;
             position:absolute;
             bottom: 250px;
             left: 200px;
+            color:rgb(9, 255, 0);
+            font-family:monospace;
         }
 
         #ComputerScience {
-            background-color: white;
+            background-color: black;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 100px;
             font-size: 50px;
             position: absolute;
             bottom: 250px;
             left: 540px;
+            font-family:monospace;
+            color:rgb(9, 255, 0);
         }
         #Engineering {
-            background-color: white;
+            background-color: black;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 100px;
             font-size: 50px;
             position:absolute;
             bottom: 100px;
-            left: 400px;
+            left: 375px;
+            font-family:monospace;
+            color:rgb(9, 255, 0);
         }
         #Mathematics {
-            background-color: white;
+            background-color: black;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 100px;
             font-size: 50px;
             position:absolute;
             bottom: 100px;
             left: 750px;
+            font-family:monospace;
+            color:rgb(9, 255, 0);
+
 
         }
     </style>
@@ -82,30 +110,33 @@
         <nav>
             <ul>
 
-                <li><a href="science.html"><strong>Science</strong></a></li>
-                <li><a href="projects.html"><strong>Projects</strong></a></li>
-                <li class="homeicon"><a href="../index.html">Home of the Scooch Logo</a></li>
-                <li><a href="wellbeing.html"><strong>Wellbeing</strong></a></li>
-                <li><a href="expression.html"><strong>Expression</strong></a></li>
+                <li><a href="pages/science.html"><strong>Science</strong></a></li>
+                <li><a href="pages/projects.html"><strong>Projects</strong></a></li>
+                <li class="homeicon"><a href="index.html">Home of the Scooch Logo</a></li>
+                <li><a href="pages/Wellbeing.html"><strong>Wellbeing</strong></a></li>
+                <li><a href="pages/Expression.html"><strong>Expression</strong></a></li>
 
             </ul>
         </nav>
 
+       
 
-        <h1>Science</h1>
     </header>
 
+    <div class="heading"><h1>Science</h1></div>
 
-    <section>
-        <ul>
-                <div><input type="button" id="Physics" onclick="window.location.href = 'physics.html';" value ="Physics" </div>
+    <div class="mainbody">
+        <section>
+            <ul>
+                <div><input type="button" id="Physics" onclick="window.location.href = 'physics.html';" value="Physics" </div>
                 <div><input type="button" id="Chemistry" onclick="window.location.href = 'chemistry.html';" value="Chemistry"</div>
                 <div><input type="button" id="ComputerScience" onclick="window.location.href = 'computerscience.html';" value="Computer Science"</div>
                 <div><input type="button" id="Mathematics" onclick="window.location.href = 'mathematics.html';" value="Mathematics"</div>
                 <div><input type="button" id="Engineering" onclick="window.location.href = 'engineering.html';" value="Engineering"</div>
-        </ul>
-        
-    </section>
+            </ul>
+
+        </section>
+    </div>
 
 
 </body>
