@@ -4,11 +4,14 @@
     <title>Scoochy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <style>
                 * {box-sizing: border-box;}
                 body{margin:0px;
-                     font-family:monospace;                     
-                     color: lime;}
+                     font-family: monospace;                     
+                     color: lime;
+					 background-color:white;}
                     
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
@@ -17,7 +20,6 @@
                           flex-wrap:nowrap;           
                           background-color:black;
                           margin:0px;}
-
                 .flex-nav div{background-color:grey;
                               width:20%;
                               margin:0px;
@@ -26,7 +28,13 @@
                               /*height of div*/
                               line-height:75px;
                               border-style:solid;}
-
+							  
+							  
+				a{display:block;
+				  text-decoration:none;}
+				 
+				a:hover{text-size:16;}	
+				
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
                 .flex-container {display: flex;
@@ -38,7 +46,6 @@
                                  background-color:black;
                                                                 
                                 } 
-
                 .flex-container div{background-color:black;
                                     width:50%;
                                     border-style: solid;                                    
@@ -64,7 +71,6 @@
                 .expression{background-image: url(images/expression.jpg);
                          background-size:100%;
                          background-repeat: no-repeat;}
-
                 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
                 @media screen and (max-width: 1115px) {
                 .flex-container {justify-content: center;    
@@ -73,17 +79,15 @@
                                  
         </style>
 </head>
-
 <body>
     <div class="flex-nav">
-            <div class="science"><a href="pages/science.html"><strong>Science</strong><a></div>
-            <div class="projects"><a href="pages/projects.html"><strong>Projects</strong><a></div>
-            <div class="home"><a href="index"><strong>Home</strong><a></div>
-            <div class="wellbeing"><a href="pages/wellbeing.html"><strong>Wellbeing</strong><a></div>  
-            <div class="expression"><a href="pages/expression.html"><strong>Expression</strong><a></div>
+            <div class="science"><a href="pages/science.html"><i class="w3-xlarge fas fa-microscope"></i><strong> Science</strong><a></div>
+            <div class="projects"><a href="pages/projects.html"><i class="w3-xlarge fas fa-book"></i><strong> Projects</strong><a></div>
+            <div class="home"><a href="index"><i class="w3-xlarge w3-spin fas fa-atom"></i><strong> Home</strong><a></div>
+            <div class="wellbeing"><a href="pages/wellbeing.html"><i class="w3-xlarge fas fa-heartbeat"></i><strong> Wellbeing</strong><a></div>  
+            <div class="expression"><a href="pages/expression.html"><i class="w3-xlarge fas fa-dice-d20"></i><strong> Expression</strong><a></div>
             
     </div>
-
     <!--To start using Flexbox model, you need to first
         define a flex container (Parent Element) with a display 
         property set to flex-->
@@ -130,10 +134,5 @@
             </div>
     </div>
       
-
-
-
-
-
 </body>
 </html>
