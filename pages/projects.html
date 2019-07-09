@@ -5,72 +5,120 @@
     <meta charset="utf-8" />
     <title>Projects</title>
 
-    <link href="../css/externalstyles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="externalstyles.css" rel="stylesheet" />
 
     <style>
+
+         * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0px;
-            padding: 0px;
+            font-family: monospace;
+            color: blue;
             background-color: black;
-            font-family:monospace;
         }
+
+        /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+        #navbar {
+            display: flex;
+            color: white;
+            /*Nowrap specifies flex items don't wrap*/
+            flex-wrap: nowrap;
+            background-color: black;
+            margin: 0px;
+        }
+
+            #navbar div {
+                background-color: black;
+                width: 20%;
+                margin: 0px;
+                /*align text to center of div*/
+                text-align: center;
+                /*height of div*/
+                line-height: 50px;
+            }
+
+        a {
+            font-size: px;
+            display: block;
+            text-decoration: none;
+        }
+
+        #navbar div a:hover {
+            background-color: dimgrey;
+            color: black;
+        }
+
+        .flex-nav div a:hover {
+            text-decoration: underline;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
         
+
         .heading {
-            
-            display:inline-flex;
+            display: inline-flex;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            background-color:black;
-            }
+            background-color: black;
+        }
 
 
         h1 {
-            align-content:center;
-            margin:20px;
-            text-align:centre;
-            color:rgb(255, 242, 242);
-            text-shadow:4px 3px rgb(9, 255, 0);
+            align-content: center;
+            margin: 20px;
+            text-align: centre;
+            color: rgb(255, 242, 242);
+            text-shadow: 4px 3px rgb(9, 255, 0);
             font-size: 80px;
-            font-family:monospace;
+            font-family: monospace;
         }
-        
+
         section {
             background-color: black;
-            }
+        }
 
         .collapsible {
-        background-color: grey;
-        color:rgb(9, 255, 0);
-        cursor: pointer;
-        padding: 20px;
-        margin:20px 0px 20px 0px;
-        border-radius:10px;
-        width: 95%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        font-family:monospace;
+            background-color: grey;
+            color: rgb(9, 255, 0);
+            cursor: pointer;
+            padding: 20px;
+            margin: 20px 0px 20px 0px;
+            border-radius: 10px;
+            width: 95%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            font-family: monospace;
+        }
+
+            .active, .collapsible:hover {
+                background-color: rgb(44, 43, 43)
             }
 
-        .active, .collapsible:hover {
-         background-color: rgb(44, 43, 43)
-        }
-
         .content {
-        padding: 20px;
-        border-radius:10px;
-        padding: 20px;
-        margin:20px 0px 20px 0px;
-        width:91%;
-        overflow: hidden;
-        background-color: #f1f1f1;
-           
+            padding: 20px;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0px 20px 0px;
+            width: 91%;
+            overflow: hidden;
+            background-color: #f1f1f1;
         }
-
-        
     </style>
 
 
@@ -78,20 +126,16 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <div id="navbar">
+            <div class="science"><a href="science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span><a></div>
+            <div class="projects"><a href="projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span><a></div>
+            <div class="home"><a href="index" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
+            <div class="wellbeing"><a href="wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span><a></div>
+            <div class="expression"><a href="expression.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span><a></div>
+        </div>
 
-                <li><a href="science.html"><strong>Science</strong></a></li>
-                <li><a href="projects.html"><strong>Projects</strong></a></li>
-                <li class="homeicon"><a href="../index.html">Home of the Scooch Logo</a></li>
-                <li><a href="wellbeing.html"><strong>Wellbeing</strong></a></li>
-                <li><a href="expression.html"><strong>Expression</strong></a></li>
 
-            </ul>
-        </nav>
-        
-       
-        
+
     </header>
     
     <div class="heading"><h1>Projects</h1></div>
@@ -123,6 +167,21 @@
         </ul>
 
         <script>
+
+            window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
