@@ -1,97 +1,126 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Projects</title>
-
+    <title>Scoochy</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="../css/externalstyles.css" rel="stylesheet" />
-
+    
     <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0px;
-            font-family: monospace;
-            color: red;
-            background-color: black;
-        }
-
-        /*Parent Element (Container):becomes
+                *{box-sizing: border-box;}
+                body{margin:0px;   
+                     font-family: monospace;                     
+                     color: rgb(44, 41, 41);
+                     background-color:black;}
+                    
+                /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
-        #navbar {
-            display: flex;
-            color: white;
-            /*Nowrap specifies flex items don't wrap*/
-            flex-wrap: nowrap;
-            background-color: black;
-            margin: 0px;
-        }
+                #navbar{display: flex;
+                        color:white;
+                        /*Nowrap specifies flex items don't wrap*/
+                        flex-wrap:nowrap;           
+                        background-color:black;
+                        margin:0px;}
 
-            #navbar div {
-                background-color: black;
-                width: 20%;
-                margin: 0px;
-                /*align text to center of div*/
-                text-align: center;
-                /*height of div*/
-                line-height: 50px;
-            }
+                #navbar div{background-color: black;
+                            width:20%;
+                            margin:0px;
+                            /*align text to center of div*/
+                            text-align: center;
+                            /*height of div*/
+                            line-height:50px;}  				  
+							  
+		a{display:block;
+                  text-decoration:none;}
 
-        a {
-            font-size: px;
-            display: block;
-            text-decoration: none;
-        }
+                #navbar div a:hover {background-color:dimgrey;
+                                     color: black;}
 
-        #navbar div a:hover {
-            background-color: dimgrey;
-            color: black;
-        }
+                .sticky {position: fixed;
+                         top: 0;
+                         width: 100%;} 
 
-        .flex-nav div a:hover {
-            text-decoration: underline;
-        }
+                p{color:white;}
 
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-    </style>
+                h5{color:dimgrey;}        	
+				
+                /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+                .wellbeing-flex-container {display: flex;
+                                          /*flex-wrap:specifies items will wrap if necessary*/
+                                          flex-wrap: wrap;
+                                          /*justify-content:center aligns flex items at center*/
+                                          justify-content: center;                                          
+                                          overflow: hidden;
+                                          background-color:black;}
 
+                .wellbeing-flex-container div{background-color:black;
+                                              width:100%;                                                         
+                                              margin: 0%;                                    
+                                              padding: 0px, 30px, 0px, 30px;
+                                              text-align:center;}     
+                h2{margin: 3%;}
 
+                .wellbeing-body{max-width: 100%; 
+                                height:auto;}
+                .wellbeing-mind{max-width: 100%; 
+                                height:auto;}
+             
+                /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 
+                @media screen and (max-width: 400px){
+               
+                .wellbeing-mind{width:98%;}}
+                               
+                @media screen and (max-width: 700px) {
+                .mobhide{display:none;}
+                .wellbeing-flex-container{flex-direction: column;}
+                .wellbeing-flex-container div{width:100%;}          
+        </style>
 </head>
+
 <body>
-    <header>
+      <div id="navbar">
+        <div class="science"><a href="pages/science.html" style="font-size: 20px";><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span><a></div>
+        <div class="projects"><a href="pages/projects.html" style="font-size: 20px";><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span><a></div>
+        <div class="home"><a href="../index.html" style="font-size: 20px";><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
+        <div class="wellbeing"><a href="pages/wellbeing.html" style="font-size: 20px";><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span><a></div>  
+        <div class="expression"><a href="pages/expression.html" style="font-size: 20px";><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span><a></div>            
+      </div>  
+    
+    <!--To start using Flexbox model, you need to first
+        define a flex container (Parent Element) with a display 
+        property set to flex-->
 
-
-        <div id="navbar">
-            <div class="science"><a href="science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span><a></div>
-            <div class="projects"><a href="projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span><a></div>
-            <div class="home"><a href="index" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
-            <div class="wellbeing"><a href="wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span><a></div>
-            <div class="expression"><a href="expression.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span><a></div>
+    <div class="wellbeing-flex-container">
+            <div class="physical">
+                    <div><a href="#"><img class="wellbeing-body" src="../images/Body.gif"></a></div>                 
+                    <h2>|Physical|</h2>
+                    <p>A wee paragraph about what is contained within this funky image ye knooowwwwwww</p>                  
+            </div>
+            <div class="mental">                    
+                    <div><a href="#"><img class="wellbeing-mind" src="../images/Brain.gif"></a></div>
+                    <h2>|Mental|</h2>
+                    <p>A wee paragraph about what is contained within this funky image ye knooowwwwwww</p>
+            </div>
+        
         </div>
-
-
-
-
-    </header>
-    
-    <div class="heading"><h1>Wellbeing</h1></div>
-
+   
     
 
+        <script>
+        window.onscroll = function() {myFunction()};
 
-       
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        } else {
+        navbar.classList.remove("sticky");}
+        }
+        </script>     
 </body>
-
 </html>
