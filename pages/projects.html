@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="externalstyles.css" rel="stylesheet" />
+    <link href="externalstyles.css" rel="stylesheet" >
 
     <style>
 
@@ -19,7 +19,7 @@
         body {
             margin: 0px;
             font-family: monospace;
-            color: blue;
+            color: black;
             background-color: black;
         }
 
@@ -45,7 +45,7 @@
             }
 
         a {
-            font-size: px;
+            font-size: 0px;
             display: block;
             text-decoration: none;
         }
@@ -80,9 +80,9 @@
         h1 {
             align-content: center;
             margin: 20px;
-            text-align: centre;
-            color: rgb(255, 242, 242);
-            text-shadow: 4px 3px rgb(9, 255, 0);
+            text-align: center;
+            color: #0000bd;
+            text-shadow: 4px 3px white;
             font-size: 80px;
             font-family: monospace;
         }
@@ -93,7 +93,7 @@
 
         .collapsible {
             background-color: grey;
-            color: rgb(9, 255, 0);
+            color:  #0000bd;
             cursor: pointer;
             padding: 20px;
             margin: 20px 0px 20px 0px;
@@ -127,12 +127,11 @@
 <body>
     <header>
         <div id="navbar">
-            <div class="science"><a href="science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span><a></div>
-            <div class="projects"><a href="projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span><a></div>
-            <div class="home"><a href="index" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
-            <div class="home"><a href="../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
-            <div class="wellbeing"><a href="wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span><a></div>
-            <div class="expression"><a href="expression.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span><a></div>
+            <div class="science"><a href="science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span></a></div>
+            <div class="projects"><a href="projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span></a></div>
+            <div class="home"><a href="../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span></a></div>
+            <div class="wellbeing"><a href="wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span></a></div>
+            <div class="expression"><a href="expression.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span></a></div>
         </div>
 
 
@@ -142,31 +141,38 @@
     <div class="heading"><h1>Projects</h1></div>
 
     <section>
-        <ul>
+        
             <button class="collapsible" id="Completed Projects">Completed Projects</button>
             <div class="content">
-                <li>completed projects</li>
-                <li>b</li>
-                <li>c</li>
+                a
+                <br />
+                b
+                <br />
+                c
+                <br />
 
             </div>
+
             <button class="collapsible" id="Future Ideas">Future Ideas</button>
             <div class="content">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                a
+                <br />
+                b
+                <br />
+                c
 
             </div>
             <button class="collapsible" id="Publications">Publications</button>
             <div class="content">
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
+                a
+                <br />
+                b
+                <br />
+                c
 
             </div>
 
-        </ul>
-
+        
         <script>
 
             window.onscroll = function () { myFunction() };
@@ -192,7 +198,8 @@ for (i = 0; i < coll.length; i++) {
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
-    } else {
+    }
+      else {
       content.style.display = "block";
     }
   }
