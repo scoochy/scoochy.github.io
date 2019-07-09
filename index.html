@@ -4,36 +4,63 @@
     <title>Scoochy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <style>
-                * {box-sizing: border-box;}
-                body{margin:0px;
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <style>
+                *{box-sizing: border-box;}
+                body{margin:0px;   
                      font-family: monospace;                     
-                     color: lime;
-					 background-color:white;}
+                     color: rgb(44, 41, 41);
+                     background-color:black;}
                     
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
-                .flex-nav{display: flex;
-                          /*Nowrap specifies flex items don't wrap*/
-                          flex-wrap:nowrap;           
-                          background-color:black;
-                          margin:0px;}
-                .flex-nav div{background-color:grey;
-                              width:20%;
+                #navbar{display: flex;
+                        color:white;
+                        /*Nowrap specifies flex items don't wrap*/
+                        flex-wrap:nowrap;           
+                        background-color:black;
+                        margin:0px;}
+
+                #navbar div{background-color: black;
+                            width:20%;
+                            margin:0px;
+                            /*align text to center of div*/
+                            text-align: center;
+                            /*height of div*/
+                            line-height:50px;}  				  
+							  
+		a{font-size:px;
+                  display:block;
+                  text-decoration:none;}
+
+                .flex-nav div a:hover{text-decoration: underline;}
+
+                .sticky {position: fixed;
+                         top: 0;
+                         width: 100%;}  
+
+                .scoochy-logo{background-image: url(images/logotest.PNG);
+                              padding:0px;
                               margin:0px;
-                              /*align text to center of div*/
-                              text-align: center;
-                              /*height of div*/
-                              line-height:75px;
-                              border-style:solid;}
-							  
-							  
-				a{display:block;
-				  text-decoration:none;}
-				 
-				a:hover{text-size:16;}	
+                              height:300px;
+                              background-position: left;
+                              background-repeat: no-repeat;
+                              background-size: 40%;
+                              position: relative;}                        
+
+
+                .scoochy-title{font-size: 15px;
+                               text-align: center;
+                               position: absolute;
+                               top: 20%;
+                               left: 70%;
+                               transform: translate(-50%, -50%);
+                               color: limegreen;}
+                
+                p{color:white;}
+                h5{color:dimgrey;}        	
 				
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
@@ -43,96 +70,87 @@
                                  /*justify-content:center aligns flex items at center*/
                                  justify-content: center;
                                  overflow: hidden;
-                                 background-color:black;
-                                                                
-                                } 
+                                 background-color:black;}
+
                 .flex-container div{background-color:black;
-                                    width:50%;
-                                    border-style: solid;                                    
-                                    margin: 0px;                                    
-                                    padding: 20px;}
-                
-                .science{background-image: url(images/science.PNG);
-                         background-size:100%;
-                         background-repeat: no-repeat;}
-                         
-                .projects{background-image: url(images/projects.jpg);
-                         background-size:100%;
-                         background-repeat: no-repeat;}
-                
-                .home{background-image: url(images/logotest.PNG);
-                         background-size:100%;
-                         background-repeat: no-repeat;}
-                                                  
-                .wellbeing{background-image: url(images/wellbeing.jpg);
-                         background-size:100%;
-                         background-repeat: no-repeat;}
-                         
-                .expression{background-image: url(images/expression.jpg);
-                         background-size:100%;
-                         background-repeat: no-repeat;}
+                                    width:100%;                                                         
+                                    margin: 0 px;                                    
+                                    padding: 0px; 30px, 0px, 30px;
+                                    text-align:center;}         
+             
                 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-                @media screen and (max-width: 1115px) {
-                .flex-container {justify-content: center;    
-                                flex-direction: column;}
-                .flex-container div{width: 100%;}
-                                 
+
+                @media screen and (min-width: 850px){
+                .scoochy-logo{background-image: url(images/logodesktop.PNG);}}
+                               
+                @media screen and (max-width: 700px) {
+                .mobhide{display:none;
+                }          
         </style>
 </head>
+
 <body>
-    <div class="flex-nav">
-            <div class="science"><a href="pages/science.html"><i class="w3-xlarge fas fa-microscope"></i><strong> Science</strong><a></div>
-            <div class="projects"><a href="pages/projects.html"><i class="w3-xlarge fas fa-book"></i><strong> Projects</strong><a></div>
-            <div class="home"><a href="index"><i class="w3-xlarge w3-spin fas fa-atom"></i><strong> Home</strong><a></div>
-            <div class="wellbeing"><a href="pages/wellbeing.html"><i class="w3-xlarge fas fa-heartbeat"></i><strong> Wellbeing</strong><a></div>  
-            <div class="expression"><a href="pages/expression.html"><i class="w3-xlarge fas fa-dice-d20"></i><strong> Expression</strong><a></div>
-            
-    </div>
+      <div class="scoochy-title">scoochy.</div>
+      <div class="scoochy-logo"></div>        
+
+      <div id="navbar">
+        <div class="science"><a href="pages/science.html" style="font-size: 20px";><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span><a></div>
+        <div class="projects"><a href="pages/projects.html" style="font-size: 20px";><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span><a></div>
+        <div class="home"><a href="index" style="font-size: 20px";><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
+        <div class="wellbeing"><a href="pages/wellbeing.html" style="font-size: 20px";><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span><a></div>  
+        <div class="expression"><a href="pages/expression.html" style="font-size: 20px";><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span><a></div>            
+      </div>  
+    
     <!--To start using Flexbox model, you need to first
         define a flex container (Parent Element) with a display 
         property set to flex-->
     <div class="flex-container">
             <div class="about">
-                    <h2>About the Site</h2>
-                    <h5>Abstract</h5>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                                       
+                    <h2>|About|</h2>
+                    <h5>Welcome to scoochy.</h5>                    
+                    <p>This site is a collaborative effort of mikeybfigmouth and pantonfibanton. A collection of multiple things that are scoochy. </p>
+                    <br>                   
             </div>
             <div class="whatsnew">
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Dec 7, 2017</h5>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <h2>|What's New|</h2>
+                    <h5><em>Recent additions to the site.</em></h5>
+                    <p>Project: How to build a computer</p>
+                    <p>Science: Lovely new notes added</p>
                     <br>
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2017</h5>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    
             </div>
             <div class="thesite">
-                    <h2>TITLE HEADING</h2>
+                    <h2>|The Site|</h2>
                     <h5>Title description, Dec 7, 2017</h5>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     <br>
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2017</h5>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                    
             </div>
             <div class="contact">
-                    <h2>TITLE HEADING</h2>
+                    <h2>|Contact|</h2>
                     <h5>Title description, Dec 7, 2017</h5>
                     <p>Some text..</p>
                     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                     <br>
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2017</h5>
-                    <p>Some text..</p>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
             </div>
     </div>
-      
+   
+    
+
+    <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>     
 </body>
 </html>
