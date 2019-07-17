@@ -8,57 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="externalstyles.css" rel="stylesheet" />
+    <link href="../stylesheets/science.css" rel="stylesheet" />
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        body, html {
-            height:100%;
-            margin: 0px;
-            font-family: monospace;
-            color: rgb(44, 41, 41);
-            background-color: black;}
-
-        /*Parent Element (Container):becomes
-                flexible by setting display to flex*/
-        #navbar {
-            display: flex;
-            color: white;
-            /*Nowrap specifies flex items don't wrap*/
-            flex-wrap: nowrap;
-            background-color: black;
-            margin: 0px;
-            z-index: 9999999;
-        }
-            #navbar div {
-                background-color: black;
-                width: 20%;
-                margin: 0px;
-                /*align text to center of div*/
-                text-align: center;
-                /*height of div*/
-                line-height: 50px;
-            }
-        a {
-            font-size: 0px;
-            display: block;
-            text-decoration: none;
-        }
-        #navbar div a:hover {
-            background-color: dimgrey;
-            color: black;
-        }
-        .flex-nav div a:hover {
-            text-decoration: underline;
-        }
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-        .heading {
+            .heading {
             display: inline-flex;
             display: flex;
             flex-direction: row;
