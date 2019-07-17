@@ -1,0 +1,52 @@
+ /*---------------------- Canvas --------------------*/ 
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+            font-family: monospace;
+            color: black;
+            background-color: black;}
+
+        .heading {            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;}
+        
+        /*---------------------- Nav bar  --------------------*/
+        /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+        #navbar {
+            display: flex;
+            color: white;
+            /*Nowrap specifies flex items don't wrap*/
+            flex-wrap: nowrap;
+            background-color: black;
+            margin: 0px;
+        }
+            #navbar div {
+                background-color: black;
+                width: 20%;
+                margin: 0px;
+                /*align text to center of div*/
+                text-align: center;
+                /*height of div*/
+                line-height: 50px;
+            }
+        a {
+            font-size: 0px;
+            display: block;
+            text-decoration: none;
+        }
+        #navbar div a:hover {
+            background-color: dimgrey;
+            color: black;
+        }
+        .flex-nav div a:hover {
+            text-decoration: underline;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;}        
