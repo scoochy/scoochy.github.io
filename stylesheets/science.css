@@ -1,3 +1,12 @@
+/*----------------------Main Body Stylez--------------------*/
+
+        * {box-sizing: border-box;}
+        body, html {height:100%;
+                    margin: 0px;
+                    font-family: monospace;
+                    color: rgb(44, 41, 41);
+                    background-color: black;}
+
 /*---------------------- Nav bar  --------------------*/
 
         /*Parent Element (Container):becomes
@@ -37,10 +46,66 @@
             top: 0;
             width: 100%;
         }
+/*--------------------Heading Image--------------------*/
 
-        * {box-sizing: border-box;}
-        body, html {height:100%;
-                    margin: 0px;
-                    font-family: monospace;
-                    color: rgb(44, 41, 41);
-                    background-color: black;}
+        .heading {
+            display: inline-flex;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+
+
+        .space-image{
+        background-image: url("../images/sciencegif.gif");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;}
+
+        .headertext {   
+        text-align: center;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:gold;}
+
+/*---------------------- Science Tabs --------------------*/
+
+        /* Style tab links */
+        .tablink {
+        background-color:rgb(44, 41, 41);
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+        }
+
+        .tablink:hover {
+        background-color: gold;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+        }
+
+        #Physics {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
+        #Maths {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
+        #Aerospace {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
+        #Computing {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
+
+/*---------------------- Media Queries  --------------------*/
+
+    @media screen and (max-width: 700px){.mobhide{display:none;}
