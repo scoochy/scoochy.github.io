@@ -1,9 +1,15 @@
 /*---------------------- Canvas --------------------*/       
-*{box-sizing: border-box;}
-body{margin:0px;   
-     font-family: monospace;                     
-     color: rgb(44, 41, 41);
-     background-color:black;}
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0px;
+    font-family: monospace;
+    color: rgb(44, 41, 41);
+    background-color: black;
+}
 
 p{color:white;}
 h2{margin: 3%;}
