@@ -4,75 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Science</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="../stylesheets/science.css" rel="stylesheet" />
-
-    <style>
-            .heading {
-            display: inline-flex;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            background-color: black;
-        }
-
-
-        .space-image{
-        background-image: url("../images/orion.jpg");
-        height: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;}
-
-        .headertext {   
-        text-align: center;
-        position: absolute;
-        top: 75%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color:gold;}
-
-            /* Style tab links */
-            .tablink {
-            background-color:rgb(44, 41, 41);
-            color: white;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            font-size: 17px;
-            width: 25%;
-            }
-
-            .tablink:hover {
-            background-color: gold;
-            }
-
-            /* Style the tab content (and add height:100% for full page content) */
-            .tabcontent {
-            color: white;
-            display: none;
-            padding: 100px 20px;
-            height: 100%;
-            }
-
-            #Physics {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
-            #Maths {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
-            #Aerospace {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
-            #Computing {background-image: linear-gradient(to bottom right,dimgrey ,rgb(44, 41, 41))}
-
-    @media screen and (max-width: 700px){.mobhide{display:none;}
-        
-    </style>
-
 </head>
-
 
 <body>
     <header>
@@ -88,9 +24,7 @@
     </header>
 
     <div class="space-image">
-            <div class="headertext">
-                <h1>Science</h1>
-                </div>
+            <div class="headertext"><h1>Science</h1></div>
     </div>
     
     <button class="tablink" onclick="openPage('Physics', this, 'gold')" id="defaultOpen"><i class="w3-large fab fa-creative-commons-sampling"></i><span class="mobhide"> Physics</span> </button>
@@ -100,9 +34,7 @@
 
     <div id="Physics" class="tabcontent">
     <h3>Topics</h3>
-    <ul>
-        <li>Mechanics </li>
-    </ul>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
 
     <div id="Maths" class="tabcontent">
@@ -118,7 +50,7 @@
     <div id="Computing" class="tabcontent">
     <h3>Computing</h3>
     <p>Who we are and what we do.</p>
-</div>
+    </div>
 
     <script>
         window.onscroll = function () { myFunction() };
@@ -146,7 +78,7 @@
         elmnt.style.backgroundColor = color;}
 
 /*Get the element with id="defaultOpen" and click on it*/
-document.getElementById("defaultOpen").click();
+        document.getElementById("defaultOpen").click();
 
     </script>
 
