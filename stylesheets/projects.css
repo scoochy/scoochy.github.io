@@ -1,52 +1,62 @@
  /*---------------------- Canvas --------------------*/ 
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0px;
-            font-family: monospace;
-            color: black;
-            background-color: black;}
+        * {box-sizing: border-box;}
 
-        .heading {            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: black;}
+        html{height:100%;}
+
+        body {height:100%;
+             margin: 0px;
+             color: black;
+             background-color: black;}
+
+        .heading {display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: black;}
         
         /*---------------------- Nav bar  --------------------*/
         /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
-        #navbar {
-            display: flex;
-            color: white;
-            /*Nowrap specifies flex items don't wrap*/
-            flex-wrap: nowrap;
-            background-color: black;
-            margin: 0px;
-        }
-            #navbar div {
+        #navbar {font-family: monospace;
+                z-index: 99999999999;
+                display: flex;
+                color: white;
+                /*Nowrap specifies flex items don't wrap*/
+                flex-wrap: nowrap;
                 background-color: black;
-                width: 20%;
-                margin: 0px;
-                /*align text to center of div*/
-                text-align: center;
-                /*height of div*/
-                line-height: 50px;
-            }
-        a {
-            font-size: 0px;
-            display: block;
-            text-decoration: none;
-        }
-        #navbar div a:hover {
-            background-color: dimgrey;
-            color: black;
-        }
-        .flex-nav div a:hover {
-            text-decoration: underline;
-        }
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;}        
+                margin: 0px;}
+
+        #navbar div {background-color: black;
+                    width: 20%;
+                    margin: 0px;
+                    /*align text to center of div*/
+                    text-align: center;
+                    /*height of div*/
+                    line-height: 50px;}
+
+        a { font-size: 0px; display: block; text-decoration: none;}
+
+        #navbar div a:hover {background-color: dimgrey; color: black;}
+
+        .flex-nav div a:hover {text-decoration: underline;}
+
+        .sticky {position: fixed; top: 0; width: 100%;}        
+
+/*---------------------- Animated Title  --------------------*/
+  
+        h1 {position: relative;
+            top:1%;
+            text-align: center;
+            font-family: monospace;
+            text-transform: uppercase;
+            font-size: 2em;
+            letter-spacing: 4px;
+            overflow: hidden;
+            background: linear-gradient(90deg, #000, blue, #000);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: animate 5s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);}
+        
+        @keyframes animate {0% {background-position: -500%;}
+                            100% {background-position: 500%;}}
