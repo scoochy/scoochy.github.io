@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>Projects</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,35 +11,28 @@
 
     <style>
 /*------------Accordion---------------------------*/
+.accordion {background-color: black;
+            font-family: monospace;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+            transition: 0.5s;}
 
-.accordion {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 20px;
-    transition: 0.5s;
-    }
-    .active, .accordion:hover {
-    background-color:rgb(117, 116, 116);
-    }
+    .active, .accordion:hover {background-color:rgb(117, 116, 116);}
 
-    .accordion:after {
-    content: '\002B';
-    color: rgb(233, 224, 224);
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-    }
-
+    .accordion:after {content: '\002B';
+                      color: rgb(233, 224, 224);
+                      font-weight: bold;
+                      float: right;
+                      margin-left: 5px;}
     .active:after {
     content: "\2212";
     }
-
     .panel {
     color:white;    
     padding: 0 18px;
@@ -49,13 +41,12 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     }
-
 /*---------------------- Media Queries  --------------------*/
-
     @media screen and (max-width: 700px) {.mobhide{display:none;} .word{margin-left:-220px}}
         
     </style>
 </head>
+
 <body>
     <header>
         <div id="navbar">
@@ -66,8 +57,14 @@
             <div class="expression"><a href="expression.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span></a></div>
         </div>
     </header>
+
+<!----------Animated Title---------->
+
+    <h1><strong>Projects</strong></h1>
+
+<!----------Accordion---------->
   
-    <button class="accordion">Completed Projects</button>
+   <button class="accordion">Completed Projects</button>
     <div class="panel">
     <p>List of completed projects.</p>
         <ul>
@@ -92,6 +89,9 @@
     </div>
 
     <script>
+
+//---------------Sticky Nav Bar on Scroll----------------//
+
         window.onscroll = function () { myFunction() };
         var navbar = document.getElementById("navbar");
         var sticky = navbar.offsetTop;
@@ -103,18 +103,18 @@
             }
         } 
 
-        var acc = document.getElementsByClassName("accordion");
-var i;
+//---------------Accordion user interaction----------------//
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.maxHeight){
         panel.style.maxHeight = null;}
         else {panel.style.maxHeight = panel.scrollHeight + "px";}});
 }
-
     </script>
 
 </body>
