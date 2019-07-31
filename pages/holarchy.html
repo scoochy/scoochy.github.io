@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scoochy</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
+
+.text {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  border-style: solid;
+  border-width: 20px;
+}
+.text:hover {
+  -webkit-transform: rotateX(35deg), translateY(-50%);
+          transform: rotateX(35deg), translateY(-50%);
+}
+.text:hover span {
+  color: red;
+}
+.text:hover span:nth-child(odd) {
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
+}
+.text:hover span:nth-child(even) {
+  -webkit-transform: skewY(-15deg);
+          transform: skewY(-15deg);
+  background-color: black;
+  color: red;
+}
+.text > span {
+  display: block;
+  background-color: black;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  box-shadow: 0 40px 50px rgba(0, 0, 0, 0.1);
+}
+.text > span:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.filterDiv {display: none;}
+
+.show {display: block;}
+
+  /*---------------------- Nav bar  --------------------*/
+        /*Parent Element (Container):becomes
+                flexible by setting display to flex*/
+                #navbar {font-family: monospace;
+                z-index: 99999999999;
+                display: flex;
+                color: white;
+                /*Nowrap specifies flex items don't wrap*/
+                flex-wrap: nowrap;
+                background-color: black;
+                margin: 0px;}
+
+        #navbar div {background-color: black;
+                    width: 20%;
+                    margin: 0px;
+                    /*align text to center of div*/
+                    text-align: center;
+                    /*height of div*/
+                    line-height: 50px;}
+
+        a {display: block; text-decoration: none;}
+
+        #navbar div a:hover {background-color: dimgrey; color: black;}
+
+        .flex-nav div a:hover {text-decoration: underline;}
+
+        .sticky {position: fixed; top: 0; width: 100%;}        
+
+        /*---------------------- Media Queries  --------------------*/
+    @media screen and (max-width: 400px){.text{ margin-top: 30%; border-style: none;}}    
+    @media screen and (max-width: 700px) {.mobhide{display:none;} .word{margin-left:-220px} .text{margin-top:15%;margin-bottom: -10%;} .button{margin-bottom: 10px;}}
+
+</style>
+
+</head>
+<body>
+<header>
+        <div id="navbar">
+            <div class="science"><a href="science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span></a></div>
+            <div class="projects"><a href="projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span></a></div>
+            <div class="home"><a href="../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fab fa-react" style="color:darkslategray"> </i><span class="mobhide"> Home</span></a></div>
+            <div class="wellbeing"><a href="wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span></a></div>
+            <div class="holarchy"><a href="holarchy.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Holarchy</span></a></div>
+        </div>
+    </header>
+    <br>
+        <div class="text">
+                <span><strong>H</strong></span>
+                <span><strong>O</strong></span>
+                <span><strong>L</strong></span>
+                <span><strong>A</strong></span>
+                <span><strong>R</strong></span>
+                <span><strong>C</strong></span>
+                <span><strong>H</strong></span>
+                <span><strong>Y</strong></span>
+        </div>
+
+        <body class="w3-black w3-content" style="max-width:1600px">
+
+
+                <!-- !PAGE CONTENT! -->
+                <div class="w3-main" style="margin-left:30px; margin-right:30px">
+                
+                    <div class="w3-container">
+                    <hr>        
+                     <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+                    <h4><b>What is Holarchy?</b></h4>
+                    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p> 
+                  </div>
+
+                  <!--Filter buttons-->
+                    <div class="w3-section w3-bottombar w3-padding-16" class="myBtnContainer">
+                      <!--Dead button-->
+                      <button class="w3-button w3-round-xxlarge w3-margin-right w3-black w3-hover-black w3-margin-top">Filter:</button> 
+                      <button class="w3-button w3-round-xxlarge w3-black w3-margin-top" onclick="filterSelection('all')">ALL</button>
+                      <button class="w3-button w3-round-xxlarge w3-white w3-margin-top" onclick="filterSelection('bookrevs')"><i class="fa fa-book w3-margin-right"></i>Book Reviews</button>
+                      <button class="w3-button w3-round-xxlarge w3-white w3-margin-top" onclick="filterSelection('astropics')"><i class="fa fa-photo w3-margin-right"></i>Astrophotography</button>
+                      <button class="w3-button w3-round-xxlarge w3-white w3-margin-top" onclick="filterSelection('travel')"><i class="fa fa-map-pin w3-margin-right"></i>Travel</button>
+                      <button class="w3-button w3-round-xxlarge w3-white w3-margin-top" onclick="filterSelection('music')"><i class="fas fa-music w3-margin-right"></i>Music</button>
+                    </div>
+                  </div>
+                  </header>
+                  
+                  <!-- First Photo Grid-->
+                  <div class="w3-row-padding">
+                    <!--Container for image and text box is a link-->
+                    <a href="../index.html">
+                    <div class="filterDiv astropics w3-third w3-container w3-margin-bottom">
+                      <img src="../images/orion.jpg" alt="Orion" style="width:100%" class="w3-hover-opacity">
+                      <div class="w3-container w3-white">
+                        <p><b>Here is a blog post</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                      </div>
+                   </div>
+                  </a>
+                    <!--end-->
+
+                    <div class="filterDiv bookrevs w3-third w3-container w3-margin-bottom">
+                      <img src="../images/logotest.PNG" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                      <div class="w3-container w3-white">
+                        <p><b>Here is another blog post</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                      </div>
+                    </div>
+
+                    <div class="filterDiv travel w3-third w3-container w3-margin-bottom">
+                      <img src="../images/sciencegif.gif" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                      <div class="w3-container w3-white">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                      </div>
+                    </div>
+                  <!--</div>-->
+                  
+                  <!-- Second Photo Grid-->
+                  <!--<div class="w3-row-padding">-->
+                    <div class="filterDiv music w3-third w3-container w3-margin-bottom">
+                      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                      <div class="w3-container w3-white">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                      </div>
+                    </div>
+                    <div class="filterDiv travel w3-third w3-container w3-margin-bottom">
+                      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                      <div class="w3-container w3-white">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                      </div>
+                    </div>
+                    <div class="filterDiv bookrevs w3-third w3-container w3-margin-bottom">
+                      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                      <div class="w3-container w3-white">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                      </div>
+                    </div>
+                  </div>
+                
+                   <!--------------------Javascript for sticky nav bar------------------>
+            <script>
+            window.onscroll = function() {myFunction()};
+    
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+    
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");}
+            }
+
+            //Filter Javascript//
+            filterSelection("all")
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("filterDiv");
+              if (c == "all") c = "";
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+              }
+            }
+
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+
+           
+
+            </script>    
+
+
+                </body>
+                </html>
