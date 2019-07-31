@@ -3,15 +3,17 @@
 * {box-sizing: border-box;}
 body, html {height:100%;
             margin: 0px;
-            font-family: monospace;
             color: rgb(44, 41, 41);
             background-color: black;}
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
 
 /*---------------------- Nav bar  --------------------*/
 
 /*Parent Element (Container):becomes
         flexible by setting display to flex*/
-#navbar{display: flex;
+#navbar{font-family:monospace;
+        display: flex;
         color: white;
         /*Nowrap specifies flex items don't wrap*/
         flex-wrap: nowrap;
@@ -27,7 +29,7 @@ body, html {height:100%;
             /*height of div*/
             line-height: 50px;}
 
-a{font-size: 0px; display: block; text-decoration: none;}
+a{display: block; text-decoration: none;}
 
 #navbar div a:hover{background-color: dimgrey;
                     color: black;}
@@ -48,7 +50,7 @@ a{font-size: 0px; display: block; text-decoration: none;}
           background-color: black;}
 
 
-.space-image{background-image: url("../images/orion.jpg");
+.space-image{background-image: url("../images/hubble1.jpg");
             height: 50%;
             background-position: center;
             background-repeat: no-repeat;
@@ -81,8 +83,9 @@ a{font-size: 0px; display: block; text-decoration: none;}
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {color: white;
-            display: none;
-            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 80px 20px;
             height: 100%;}
 
 #News {background-image: linear-gradient(to bottom right,#1d1f20, dimgrey)}
@@ -91,6 +94,18 @@ a{font-size: 0px; display: block; text-decoration: none;}
 #Aerospace {background-image: linear-gradient(to bottom right,#1d1f20, dimgrey)}
 #Computing {background-image: linear-gradient(to bottom right,#1d1f20, dimgrey)}
 
+#algebra{color:white;}
+
+.twitter{position:relative; left: 10%; justify-content:center; height: 100%;}
+
 /*---------------------- Media Queries  --------------------*/
 
-@media screen and (max-width: 700px){.mobhide{display:none;} .space-image{background-image: url("../images/sciencegif.gif");}}
+ 
+
+@media screen and (max-width: 700px){.mobhide{display:none;} 
+                                     .space-image{background-image: url("../images/sciencegif.gif");}
+                                     .tabcontent{height:150%;}
+                                     .twitter{height: 75%;width:auto;}
+                                     .tab{display:none;}
+                                     .tabcontent{display:none}
+                                     }
