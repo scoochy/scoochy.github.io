@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link href="../stylesheets/projects.css" rel="stylesheet" >
 
     <style>
 /*------------Accordion---------------------------*/
 .accordion {background-color: black;
-            font-family: monospace;
             color: white;
             cursor: pointer;
             padding: 18px;
@@ -23,7 +23,7 @@
             font-size: 20px;
             transition: 0.5s;}
 
-    .active, .accordion:hover {background-color:rgb(117, 116, 116);}
+    .active, .accordion:hover {background-color:blue;}
 
     .accordion:after {content: '\002B';
                       color: rgb(233, 224, 224);
@@ -36,7 +36,7 @@
     .panel {
     color:white;    
     padding: 0 18px;
-    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom right,#1d1f20, dimgrey);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -52,15 +52,16 @@
         <div id="navbar">
             <div class="science"><a href="science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span></a></div>
             <div class="projects"><a href="projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span></a></div>
-            <div class="home"><a href="../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span></a></div>
+            <div class="home"><a href="../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fab fa-react" style="color:darkslategray"> </i><span class="mobhide"> Home</span></a></div>
             <div class="wellbeing"><a href="wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span></a></div>
-            <div class="expression"><a href="expression.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span></a></div>
+            <div class="holarchy"><a href="holarchy.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Holarchy</span></a></div>
         </div>
     </header>
 
 <!----------Animated Title---------->
 
-    <h1><strong>Projects</strong></h1>
+    <h1 style="font-family: monospace"><strong>Projects</strong></h1>
+    <hr style="margin-left: 35%; margin-right:35%;">
 
 <!----------Accordion---------->
   
@@ -68,6 +69,9 @@
     <div class="panel">
     <p>List of completed projects.</p>
         <ul>
+            <li><a href="#">Project Link</a></li>
+            <li><a href="#">Project Link</a></li>
+            <li><a href="#">Project Link</a></li>
             <li><a href="#">Project Link</a></li>
         </ul>
     </div>
