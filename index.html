@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Scoochy</title>
@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     
     <style>
                 *{box-sizing: border-box;}
-                body{margin:0px;   
-                     font-family: monospace;                     
+                body{margin:0px;                      
                      color: rgb(44, 41, 41);
                      background-color:black;}
-                    
+                body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif;}
                 /*Parent Element (Container):becomes
                 flexible by setting display to flex*/
-                #navbar{display: flex;
+                #navbar{font-family:monospace;
+                        display: flex;
                         color:white;
                         /*Nowrap specifies flex items don't wrap*/
                         flex-wrap:nowrap;           
@@ -31,14 +32,11 @@
                             /*height of div*/
                             line-height:50px;}  				  
 							  
-		a{font-size:px;
-                  display:block;
+		a{display:block;
                   text-decoration:none;}
-	    
-	    	#navbar div a:hover {background-color:dimgrey;
-                                     color: black;}
 
-                .flex-nav div a:hover{text-decoration: underline;}
+                #navbar div a:hover {background-color:dimgrey;
+                                     color: black;}
 
                 .sticky {position: fixed;
                          top: 0;
@@ -87,8 +85,7 @@
                 .scoochy-logo{background-image: url(images/logodesktop.PNG);}}
                                
                 @media screen and (max-width: 700px) {
-                .mobhide{display:none;
-                }          
+                .mobhide{display:none;}          
         </style>
 </head>
 
@@ -99,9 +96,9 @@
       <div id="navbar">
         <div class="science"><a href="pages/science.html" style="font-size: 20px";><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span><a></div>
         <div class="projects"><a href="pages/projects.html" style="font-size: 20px";><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span><a></div>
-        <div class="home"><a href="index.html" style="font-size: 20px";><i class="w3-xlarge w3-spin fas fa-atom" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
+        <div class="home"><a href="index" style="font-size: 20px";><i class="w3-xlarge w3-spin fab fa-react" style="color:darkslategray"> </i><span class="mobhide"> Home</span><a></div>
         <div class="wellbeing"><a href="pages/wellbeing.html" style="font-size: 20px";><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span><a></div>  
-        <div class="expression"><a href="pages/expression.html" style="font-size: 20px";><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Scrapbook</span><a></div>            
+        <div class="holarchy"><a href="pages/holarchy.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Holarchy</span></a></div>            
       </div>  
     
     <!--To start using Flexbox model, you need to first
@@ -154,6 +151,7 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+                
 </script>     
 </body>
 </html>
