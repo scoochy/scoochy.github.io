@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">  
+<link href="../../../stylesheets/science.css" rel="stylesheet" />
+<title>Algebra Scooch</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #474e5d;
+* {box-sizing: border-box;}
+body, html {
+  background-color: black;
   font-family: Helvetica, sans-serif;
 }
+
+/*----------------------Header Image-------------------------------*/
+.container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container img {vertical-align: middle;}
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: gold;
+  width: 100%;
+  padding: 20px;}
+  .mobiletitle{text-align: center;     
+              display: none;
+              background: rgba(0, 0, 0, 0.5);}
+
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -18,7 +40,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
@@ -30,18 +51,16 @@ body {
   left: 50%;
   margin-left: -3px;
 }
-
 /* Container around content */
-.container {
+.timeline_container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
-
 /* The circles on the timeline */
-.container::after {
-  content: '';
+.timeline_container::after {
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -52,18 +71,15 @@ body {
   border-radius: 50%;
   z-index: 1;
 }
-
-/* Place the container to the left */
+/* Place the .timeline_container to the left */
 .left {
   left: 0;
 }
-
-/* Place the container to the right */
+/* Place the .timeline_container to the right */
 .right {
   left: 50%;
 }
-
-/* Add arrows to the left container (pointing right) */
+/* Add arrows to the left .timeline_container (pointing right) */
 .left::before {
   content: " ";
   height: 0;
@@ -76,8 +92,7 @@ body {
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent white;
 }
-
-/* Add arrows to the right container (pointing left) */
+/* Add arrows to the right .timeline_container (pointing left) */
 .right::before {
   content: " ";
   height: 0;
@@ -90,19 +105,20 @@ body {
   border-width: 10px 10px 10px 0;
   border-color: transparent white transparent transparent;
 }
-
-/* Fix the circle for containers on the right side */
+/* Fix the circle for .timeline_containers on the right side */
 .right::after {
   left: -16px;
 }
-
 /* The actual content */
-.content {
+.timeline_content {
   padding: 20px 30px;
   background-color: white;
   position: relative;
   border-radius: 6px;
 }
+
+@media screen and (max-width: 790px){.container{display:none;} .mobiletitle{color:gold; ;display: inline-block;}}
+
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
@@ -112,20 +128,19 @@ body {
   }
   
   /* Full-width containers */
-  .container {
+  .timeline_container {
   width: 100%;
   padding-left: 70px;
   padding-right: 25px;
   }
   
   /* Make sure that all arrows are pointing leftwards */
-  .container::before {
+  .timeline_container::before {
   left: 60px;
   border: medium solid white;
   border-width: 10px 10px 10px 0;
   border-color: transparent white transparent transparent;
   }
-
   /* Make sure all circles are at the same spot */
   .left::after, .right::after {
   left: 15px;
@@ -140,44 +155,160 @@ body {
 </head>
 <body>
 
-<div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <h2>2017</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2016</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <h2>2015</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2012</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <h2>2011</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2007</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-</div>
+    <header>
 
+        <div id="navbar">
+            <div class="science"><a href="../../science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span></a></div>
+            <div class="projects"><a href="../../projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span></a></div>
+            <div class="home"><a href="../../../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fab fa-react" style="color:darkslategray"> </i><span class="mobhide"> Home</span></a></div>
+            <div class="wellbeing"><a href="../../wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span></a></div>
+            <div class="holarchy"><a href="../../holarchy.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Holarchy</span></a></div>
+        </div>
+
+    </header>
+    
+    <div class="container">
+        <img src="../../../images/Sputnik.jpg" alt="satellite_image" style="width:100%; filter: blur(0px);">
+        <div class="content">
+          <h1>History of Satellites</h1>
+          <p style="padding: 0 0;">Below is a timeline of the major advancements taken in the field of satellites, from their first conception to present day capabilities. <br>Check back continuously for additional entries!</p>
+        </div>
+      </div>    
+      <br>
+      <hr style="margin-left: 15%;margin-right:15%; margin-top:5%">      
+     
+        <div class="mobiletitle">
+          <h1>History of Satellites</h1>
+          <p style="padding: 0 2%;">Below is a timeline of the major advancements taken in the field of satellites, from their first conception to present day capabilities. <br>Check back continuously for additional entries!</p>
+        </div>
+
+<!--Timeline Links-->        
+
+<div class="timeline">
+  <div class="timeline_container left">
+    <div class="timeline_content">
+      <h3>1869-1879 – First fictional artificial satellites.</h3>
+      <p>The Brick Moon, written in 1869 by Edward Hale and The Begum’s Fortune written in 1879 by Jules Verne were the first mentions of orbital satellites.</p>
+    </div>
+  </div>
+  <div class="timeline_container right">
+    <div class="timeline_content">
+      <h2>1903 – First orbit of Earth calculated.</h2>
+      <p>Konstantin Tsiolkovsky calculated the minimum orbital speed necessary for a spacecraft to obtain orbit around Earth as 8km/s. He proposed using a multi-stage rocketry system energised by liquid fuel to obtain this orbit.</p>
+    </div>
+  </div>
+  <div class="timeline_container left">
+    <div class="timeline_content">
+      <h3>1928 – First description of a space station.</h3>
+      <p>Herman Potočnik proposes the utility of orbiting spacecraft for scientific research, as well as geostationary satellites for radio communication purposes between themselves and Earth.</p>
+    </div>
+  </div>
+  <div class="timeline_container right">
+    <div class="timeline_content">
+      <h3>1957 – First artificial satellite launch.</h3>
+      <p>Sputnik is launched into an elliptical orbit by the Soviet Union. Travelling at 29000km/h, it has a mass of 83.6 kg and completes a rotation of earth every 96.2 minutes, orbiting at an altitude between 939km and 215km.</p>
+    </div>
+  </div>
+  <div class="timeline_container left">
+    <div class="timeline_content">
+      <h3>1960 – First successful weather satellite.</h3>
+      <p>Tiros-1 is launched by NASA marking the beginning of the Tiros program, the predecessor to the Nimbus program of weather satellites. Tiros-1 could transmit infrared images of Earth’s cloud cover as well as detecting and charting hurricanes.</p>
+    </div>
+  </div>
+  <div class="timeline_container right">
+    <div class="timeline_content">
+      <h3>1961 – First person to orbit earth.</h3>
+      <p>Cosmonaut Yuri Gagarin orbited earth for the first time inside the Vostok spacecraft!</p>
+    </div>
+  </div>
+  <div class="timeline_container left">
+      <div class="timeline_content">
+        <h3>1962 – First communications satellite.</h3>
+        <p>Low Earth orbit satellite Telstar-1 broadcasts the first live transatlantic telecast. Intelsat is then formed, managing a constellation of satellites which provide broadcasting services around the globe.</p>
+      </div>
+    </div>
+    <div class="timeline_container right">
+        <div class="timeline_content">
+          <h3>1970 – China launches its first satellite.</h3>
+          <p>China becomes the 5th nation to obtain sovereign launch capabilities -the previous four being the U.S.S.R (1957), U.S.A (1958), France (1965) and Japan (1970)- after launching the Dongfanghong1 satellite using its Long March rocket.</p>
+        </div>
+      </div>
+      <div class="timeline_container left">
+          <div class="timeline_content">
+            <h3>1971 – Launch of first space station.</h3>
+            <p>Salyut1 is launched by the Soviet Union as a single pre-=assembled station and was used until its resources were exhausted in 1986.</p>
+          </div>
+        </div>
+        <div class="timeline_container right">
+            <div class="timeline_content">
+              <h3>1972 – Beginning of Landsat program.</h3>
+              <p>Landsat begins with the launch of the Earth Resources Technology Satellite, later changing its name to the former, who’s instruments acquire millions of images analysing both natural and manmade changes to Earth. It is the longest running program of satellite imagery of the planet.</p>
+            </div>
+          </div>
+          <div class="timeline_container left">
+              <div class="timeline_content">
+                <h3>1979 – ESA’s first launch.</h3>
+                <p>The ESA begins its space program with the launching of two telecommunication satellites into orbit aboard Ariane1.</p>
+              </div>
+            </div>
+            <div class="timeline_container right">
+                <div class="timeline_content">
+                  <h3>1981 – Launch of first space shuttle.</h3>
+                  <p>The American Space Shuttle Program begins with the launching of Columbia, containing crew members John Young and Robert Crippen. The program took both astronauts and satellites into orbit until its end in 2011.</p>
+                </div>
+              </div>
+              <div class="timeline_container left">
+                  <div class="timeline_content">
+                    <h3>1990 – Launch of Hubble Space Telescope.</h3>
+                    <p>Hubble was launched aboard space shuttle Discovery, allowing for greater detailed images of the universe outside of Earth’s turbulent atmosphere.</p>
+                  </div>
+                </div>
+                <div class="timeline_container right">
+                    <div class="timeline_content">
+                      <h3>1994 – First GPS constellation.</h3>
+                      <p>The Space-based satellite system, Global Position System (GPS), containing 24 geosynchronous satellites provides users with location and time information anywhere on or close to the Earth in all weather conditions.</p>
+                    </div>
+                  </div>
+                  <div class="timeline_container left">
+                      <div class="timeline_content">
+                        <h3>1998 – Launch of the International Space Station</h3>
+                        <p>In a joint effort by Russia, the US, EU, Japan and Canada, the first component of the modular international space station ISS is launched, serving as a microgravity environment and research platform.</p>
+                      </div>
+                    </div>
+                    <div class="timeline_container right">
+                        <div class="timeline_content">
+                          <h3>2004 – Launch of comet chasing satellite.</h3>
+                          <p>ESA launched the Rosetta carrying lander probe Philae which rendezvoused with comet 67P. Philae became the first probe to successfully land on a comet in 2014.</p>
+                        </div>
+                      </div>
+                      <div class="timeline_container left">
+                          <div class="timeline_content">
+                            <h3>2017 – World’s first private orbital launch site.</h3>
+                            <p>Rocket Lab’s (RL) Mahia facility in New Zealand becomes the world’s first private orbital launch site after a successful test launch of the first Electron Rocket, with hopes of making satellite launches more cost effective to other organisations. <br>Their second test at the beginning of 2018 seen the successful deployment of three US commercial satellites and a fourth satellite called Humanity Star-NZ’s first satellite. </p>
+                          </div>
+                        </div>
+                        <div class="timeline_container right">
+                            <div class="timeline_content">
+                              <h3>2018 – First commercial rocket launch from NZ.</h3>
+                              <p>RL successfully lifted six satellites and a technology demonstrator into LEO in their first commercial deployment from Mahia.</p>
+                            </div>
+                          </div>
+
+</div>
+<script>
+    /*-------------Sticky Nav----------------*/
+            window.onscroll = function () { myFunction() };
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+    /*--------------------------------------------------------------*/
+    </script>
+/*--------------------------------------------------------------*/
 </body>
 </html>
