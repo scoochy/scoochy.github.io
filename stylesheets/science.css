@@ -1,7 +1,7 @@
 /*----------------------Main Body Stylez--------------------*/
 
 * {box-sizing: border-box;}
-body, html {height:100%;
+body, html {height:200%;
             margin: 0px;
             color: rgb(44, 41, 41);
             background-color: black;}
@@ -51,7 +51,7 @@ a{display: block; text-decoration: none;}
 
 
 .space-image{background-image: url("../images/hubble1.jpg");
-            height: 50%;
+            height: 15%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -96,7 +96,7 @@ a{display: block; text-decoration: none;}
 
 #algebra{color:white;}
 
-.twitter{position:relative; left: 10%; justify-content:center; height: 100%;}
+.twitter{position:relative; left: 30%; justify-content:center; height: 100%;}
 
 /*---------------------- Media Queries  --------------------*/
 
