@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">  
+<link href="../../stylesheets/science.css" rel="stylesheet" />
+<title>Algebra Scooch</title>
+<style>
+* {box-sizing: border-box}
+/*----------------------Header Image-------------------------------*/
+  .container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container img {vertical-align: middle;}
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: gold;
+  width: 100%;
+  padding: 20px;}
+  .mobiletitle{text-align: center;     
+              display: none;
+              background: rgba(0, 0, 0, 0.5);}
+  
+  @media screen and (max-width: 790px){.container{display:none;} .mobiletitle{color:gold; ;display: inline-block;}}
+</style>
+</head>
+<body>
+
+    <header>
+
+        <div id="navbar">
+            <div class="science"><a href="../science.html" style="font-size: 20px" ;><i class="w3-large fas fa-microscope" style="color:gold"> </i><span class="mobhide"> Science</span></a></div>
+            <div class="projects"><a href="../projects.html" style="font-size: 20px" ;><i class="w3-large fas fa-book" style="color:blue"> </i><span class="mobhide"> Projects</span></a></div>
+            <div class="home"><a href="../../index.html" style="font-size: 20px" ;><i class="w3-xlarge w3-spin fab fa-react" style="color:darkslategray"> </i><span class="mobhide"> Home</span></a></div>
+            <div class="wellbeing"><a href="../wellbeing.html" style="font-size: 20px" ;><i class="w3-large fas fa-heartbeat" style="color:green"> </i><span class="mobhide"> Wellbeing</span></a></div>
+            <div class="holarchy"><a href="../holarchy.html" style="font-size: 20px" ;><i class="w3-large fas fa-dice-d20" style="color:red"> </i><span class="mobhide"> Holarchy</span></a></div>
+        </div>
+
+    </header>
+    
+    <div class="container">
+        <img src="../../images/satellite.jpg" alt="satellite_image" style="width:100%; filter: blur(0px);">
+        <div class="content">
+          <h1>Satellites</h1>
+          <p style="padding: 0 2%;">Below is a comprehensive description of the technological capabilities of contemporary satellites. This includes details on the Earth based and on-board systems and subsystems required for their functionality, as well as information on how they are placed into orbit. Information is included on the space environment and the fundamental principles of spaceflight.</p>
+        </div>
+      </div>    
+      <br>
+      <hr style="margin-left: 15%;margin-right:15%; margin-top:5%">      
+     
+        <div class="mobiletitle">
+          <h1>Satellites</h1>
+          <p style="padding: 0 2%;">Algrebra is lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+        </div>
+      
+     <div style="color:white";>
+    <h3>Satellites</h3>
+    <ul>
+            <li><a id="satellites_timeline" href="satellites/timeline.html">History of Satellites</a></li>
+            <li>Flight and Spaceflight</li>
+            <li>Space Technologies</li>    
+        </ul>
+    </div>     
+      
+<script>
+/*-------------Sticky Nav----------------*/
+        window.onscroll = function () { myFunction() };
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+/*--------------------------------------------------------------*/
+</script>
+   
+</body>
+</html> 
